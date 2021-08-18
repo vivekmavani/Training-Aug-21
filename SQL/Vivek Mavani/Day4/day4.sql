@@ -1,3 +1,7 @@
+Select RANK() OVER(ORDER BY Salary DESC),Salary from dbo.Employees
+Select DENSE_RANK() OVER(ORDER BY Salary DESC),* from dbo.Employees
+Select ROW_NUMBER() OVER(ORDER BY Salary DESC),Salary from dbo.Employees
+
 --1 Write a query to rank employees based on their salary for a month
 Select RANK() OVER(ORDER BY Salary DESC),Salary from dbo.Employees
 

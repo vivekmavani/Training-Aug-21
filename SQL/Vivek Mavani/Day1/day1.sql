@@ -13,7 +13,7 @@ CREATE table JobHistory
 (
 EmployeeId int CONSTRAINT eid PRIMARY KEY IDENTITY(1,1),
 StartDate date not null,
-End_Date date CONSTRAINT enddate CHECK(End_Date LIKE '--/--/----'),
+End_Date date CONSTRAINT enddate CHECK(End_Date LIKE '__/__/____'),
 Job_Id  decimal(2) not null,
 Department_Id  int not null,
 )
@@ -33,7 +33,7 @@ FirstName varchar(20) not null,
 LastName varchar(20) not null,
 Email varchar(30) not null,
 PhoneNumber varchar(10) CONSTRAINT pn CHECK(PhoneNumber LIKE '[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]'),
-Hire_Date date CONSTRAINT employees_date CHECK(Hire_Date LIKE '--/--/----'),
+Hire_Date date CONSTRAINT employees_date CHECK(Hire_Date LIKE '__/__/____'),
 Job_Id int  not null CONSTRAINT jsid FOREIGN KEY (Job_Id) REFERENCES jobs(JobId),
 Salary varchar(10),
 Commission int not null,
@@ -84,7 +84,7 @@ FirstName varchar(20) not null,
 LastName varchar(20) not null,
 Email varchar(30) not null,
 PhoneNumber varchar(9) CONSTRAINT pn CHECK(PhoneNumber LIKE '[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]'),
-Hire_Date date CONSTRAINT employees_date CHECK(Hire_Date LIKE '--/--/----'),
+Hire_Date date CONSTRAINT employees_date CHECK(Hire_Date LIKE '__/__/____'),
 Salary varchar(10),
 Manager_Id int not null
 )

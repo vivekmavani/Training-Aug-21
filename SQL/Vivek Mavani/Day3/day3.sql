@@ -1,3 +1,34 @@
+-- remove space from left side LTRIM
+SELECT ASCII('A'),LOWER('SQL'),UPPER('sql'),LTRIM('   vivek'),REVERSE('ekviv')
+-- sound same spelling differnt 
+SELECT SOUNDEX('red'),SOUNDEX('read')
+--reapeting 
+SELECT REPLICATE('*',7)
+SELECT REPLACE('C# Language','C#','Java')
+SELECT STUFF('C# Language',1,2,'Java')
+
+SELECT * FROM string_split('C#,Java,Php',',')
+-- serch pettrn
+SELECT PATINDEX('%Language%','C# Language')
+--from 1
+SELECT CHARINDEX('p','Parrot')
+SELECT CHARINDEX('r','Parrot')
+SELECT CHARINDEX('s','MicrosoftSQL Server',11)
+SELECT CONCAT('vivek',' ','mavani')
+
+SELECT CHARINDEX ('s','MicrosoftSQL Server',CHARINDEX('s','MicrosoftSQL Server')+1)
+
+USE AdventureWorksLT2017
+SELECT DATEADD(day,5,DAYADD(mm,5,hiredate)) from table
+SELECT ISDATE('2021-12-8')
+SELECT DATEDIFF(MM,HIREDATE,GETDATE()) FROM table
+USE daytwo
+SELECT FORMAT(HireDate,'yyyy/mm/dd') from dbo.Employees
+
+SELECT 
+
+SELECT GETDATE(),GETUTCDATE(),SYSDATETIME(),SYSDATETIMEOFFSET(),TODATETIMEOFFSET(GETDATE(),'-0.7:00')
+
 --Write a query that displays the FirstName and the length of the FirstName for 
 --all employees whose name starts with the letters ‘A’, ‘J’ or ‘M’. 
 --Give each column an appropriate label. Sort the results by the employees’ FirstName
