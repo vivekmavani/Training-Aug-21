@@ -82,7 +82,7 @@ worksatid int  not null CONSTRAINT worksatid_worksattotable PRIMARY KEY IDENTITY
 salespersonid  int  DEFAULT null CONSTRAINT salespersonid_worksattotable FOREIGN KEY (salespersonid) REFERENCES salesperson(salespersonid) ON DELETE CASCADE ON UPDATE CASCADE,
 managingsalespersonid int not null,
 dealershipid int  DEFAULT null CONSTRAINT dealershipid_worksattotable FOREIGN KEY (dealershipid) REFERENCES dealership(dealershipid) ON DELETE CASCADE ON UPDATE CASCADE,
-monthworked DATE CONSTRAINT year_cartable CHECK(monthworked LIKE '--/--/----'),
+monthworked DATE CONSTRAINT year_worksat CHECK(monthworked LIKE '__/__/____'),
 basesalaryformonth MONEY not null
 )
 
@@ -100,8 +100,260 @@ customerid int  DEFAULT null CONSTRAINT customerid_saletable FOREIGN KEY (custom
 salespersonid int  DEFAULT null CONSTRAINT salespersonid_saletable FOREIGN KEY (salespersonid) REFERENCES salesperson(salespersonid) ON DELETE CASCADE ON UPDATE CASCADE,
 dealershipid int DEFAULT null CONSTRAINT dealershipid_saletable FOREIGN KEY (dealershipid) REFERENCES dealership(dealershipid) ON DELETE CASCADE ON UPDATE CASCADE, 
 saleprice MONEY not null, 
-saledate  DATE CONSTRAINT year_cartable CHECK(saledate LIKE '--/--/----'),
+saledate  DATE CONSTRAINT year_sale CHECK(saledate LIKE '__/__/____'),
 )
+
+USE [day5cardatabase]
+GO
+
+INSERT INTO [dbo].[car]
+           ([vin]
+           ,[make]
+           ,[model]
+           ,[year]
+           ,[mileage]
+           ,[askprice]
+           ,[invoiceprice])
+     VALUES
+           (1
+           ,'Toyota'
+           ,'Prius'
+           ,'2021-08-19'
+           ,1222.90
+           ,200000
+           ,100000),
+           (2
+           ,'Toyota'
+           ,'Camry'
+           ,'2021-08-19'
+           ,2222.90
+           ,300000
+           ,400000),
+		     (3
+           ,'Toyota'
+           ,'Prius2'
+           ,'2021-08-19'
+           ,1222.90
+           ,200000
+           ,100000),
+           (4
+           ,'Toyota'
+           ,'Camry2'
+           ,'2021-08-19'
+           ,2222.90
+           ,300000
+           ,400000)
+GO
+
+USE [day5cardatabase]
+GO
+
+INSERT INTO [dbo].[dealership]
+           ([name]
+           ,[address]
+           ,[city]
+           ,[state])
+     VALUES
+           ('Honda Sales'
+           ,'address 1'
+           ,'bhavnagar'
+           ,'Gujarat'),
+		     ('Yamaha World'
+           ,'address 2'
+           ,'ahmdabad'
+           ,'Gujarat'),
+		     ('Concept Hyundai'
+           ,'address 3'
+           ,'gandhinagar'
+           ,'Gujarat'),
+		     ('Hero Honda Car World'
+           ,'address 4'
+           ,'bhavnagar'
+           ,'Gujarat'),
+		     ('Toyota Performance'
+           ,'address 5'
+           ,'bhavnagar'
+           ,'Gujarat'),
+		     ('Ferrari Sales'
+           ,'address 6'
+           ,'bhavnagar'
+           ,'Gujarat')
+GO
+
+
+USE [day5cardatabase]
+GO
+
+INSERT INTO [dbo].[salesperson]
+           ([name])
+     VALUES
+           ('Adam Smith'),
+		   ('Narendra Modi'),
+		   ('Amit Shah'),
+		   ('Vijay Rupani'),
+		   ('Sachin Tendulkar'),
+		   ('Dhoni'),
+		   ('Virat Kohali')
+GO
+
+
+ USE [day5cardatabase]
+GO
+
+INSERT INTO [dbo].[customer]
+           ([name]
+           ,[address]
+           ,[city]
+           ,[state])
+     VALUES
+           ('Dhoni'
+           ,'address 1'
+           ,'Ahmedabad'
+           ,'Gujarat'),
+		     ('Vivek'
+           ,'address 2'
+           ,'gandhinagar'
+           ,'Gujarat'),
+		     ('Salman'
+           ,'address 3'
+           ,'Ahmedabad'
+           ,'Gujarat'),
+		     ('Vijay'
+           ,'address 4'
+           ,'bhavnagar'
+           ,'Gujarat'),
+		     ('Ajay'
+           ,'address 5'
+           ,'Ahmedabad'
+           ,'Gujarat')
+GO
+
+
+USE [day5cardatabase]
+GO
+
+INSERT INTO [dbo].[reportsto]
+           ([salespersonid]
+           ,[managingsalespersonid])
+     VALUES
+           (1
+           ,2),
+		   (2
+           ,2),
+		   (3
+           ,2),
+		   (4
+           ,3)
+GO
+
+
+USE [day5cardatabase]
+GO
+
+INSERT INTO [dbo].[worksat]
+           ([salespersonid]
+           ,[managingsalespersonid]
+           ,[dealershipid]
+           ,[monthworked]
+           ,[basesalaryformonth])
+     VALUES
+           (1
+           ,2
+           ,1
+           ,'2010-01-01'
+           ,2000),
+		    (2
+           ,2
+           ,1
+           ,'2010-01-01'
+           ,2000),
+		    (3
+           ,1
+           ,1
+           ,'2010-01-01'
+           ,2000),
+		    (4
+           ,3
+           ,1
+           ,'2012-01-01'
+           ,2000),
+		    (4
+           ,4
+           ,1
+           ,'2011-01-01'
+           ,2000)
+GO
+
+
+USE [day5cardatabase]
+GO
+
+INSERT INTO [dbo].[inventory]
+           ([vin]
+           ,[dealershipid])
+     VALUES
+           (1
+           ,2),
+		    (2
+           ,2),
+		    (3
+           ,2),
+		    (3
+           ,2),
+		    (4
+           ,4),
+		   (1
+           ,4),
+		    (4
+           ,2),
+		    (1
+           ,2),
+		    (3
+           ,3),
+		    (4
+           ,1)
+GO
+
+
+USE [day5cardatabase]
+GO
+
+INSERT INTO [dbo].[sale]
+           ([vin]
+           ,[customerid]
+           ,[salespersonid]
+           ,[dealershipid]
+           ,[saleprice]
+           ,[saledate])
+     VALUES
+           (1
+           ,2
+           ,2
+           ,2
+           ,2000
+           ,'01/01/2011'),
+		   (2
+           ,3
+           ,1
+           ,2
+           ,2000
+           ,'2021-01-01'),
+		   (4
+           ,1
+           ,2
+           ,4
+           ,2000
+           ,'2021-01-01'),
+		   (1
+           ,1
+           ,4
+           ,1
+           ,2000
+           ,'2021-01-01')
+GO
+
+
+
 
 
 --1. Find the names of all salespeople who have ever worked for the company at any dealership.
@@ -128,7 +380,7 @@ SELECT a.name FROM salesperson a JOIN reportsto b ON a.salespersonid = b.salespe
 WHERE (SELECT salespersonid FROM salesperson WHERE name = 'Adam Smith') = b.managingsalespersonid 
 
 --7. Find the names of all salespeople who do not have a manager.
-SELECT a.name FROM salesperson a RIGHT JOIN reportsto b ON a.salespersonid <> b.managingsalespersonid 
+SELECT name FROM salesperson WHERE salespersonid NOT IN (SELECT managingsalespersonid FROM reportsto)
 
 --8. Find the total number of dealerships.
 SELECT COUNT(dealershipid) FROM dealership
@@ -143,25 +395,29 @@ SELECT a.name FROM customer a JOIN sale b  ON a.customerid = b.customerid JOIN d
 WHERE a.city <> c.city
 
 --11. Find the name of the salesperson that made the largest base salary working at the dealership named "Ferrari Sales" during January 2010.
-SELECT a.name,MAX(b.basesalaryformonth) FROM salesperson a JOIN worksat b ON a.salespersonid = b.salespersonid 
-JOIN dealership c ON b.dealershipid = c.dealershipid WHERE C.name = 'Ferrari Sale' AND DATENAME(MONTH,b.monthworked) + ' '+DATENAME(YEAR,b.monthworked) = 'January 2010' 
+Select name From salesperson WHERE salespersonid IN(SELECT TOP(1) salespersonid FROM
+worksat WHERE DATENAME(MONTH,monthworked) + ' '+DATENAME(YEAR,monthworked) = 'January 2010'  ORDER BY basesalaryformonth DESC) 
 
---12. List the name, street address, city, and state of any customer who has bought more than two cars from all dealerships combined since January 1, 2010.
-SELECT a.name,a.address,a.city,a.state FROM customer a JOIN sale b ON a.customerid = b.customerid WHERE b.customerid > 2 AND FORMAT(b.saledate,'MMMM dd, yyyy')  = 'January 1, 2010'
-
+--12. List the name, street address, city, and state of any customer 
+--who has bought more than two cars from all dealerships combined since January 1, 2010.
+SELECT a.name,a.address,a.city,a.state,b.saledate FROM customer a JOIN sale b ON a.customerid = b.customerid 
+WHERE b.customerid > 2 AND FORMAT(b.saledate,'MMMM dd, yyyy')  = 'January 1, 2010'
 
 --13. List the name, salesperson ID, and total sales amount for each salesperson who has ever sold at least one car.
 --The total sales amount for a salesperson is the sum of the sale prices of all cars ever sold by that salesperson.
-SELECT a.name,a.salespersonid,SUM(b.saleprice) FROM salesperson a JOIN sale b ON a.salespersonid = b.salespersonid GROUP BY b.salespersonid
-
+SELECT a.name,a.salespersonid,SUM(b.saleprice) FROM salesperson a JOIN sale b  
+ON a.salespersonid = b.salespersonid GROUP BY a.name,a.salespersonid 
+SELECT * FROM sale
+ 
 --14. Find the names of all customers who bought cars during 2010 who were also salespeople during 2010.
 --For the purpose of this query,assume that no two people have the same name.
-SELECT a.name FROM customer a JOIN sale b ON a.customerid = b.customerid JOIN  sale c ON b.customerid = c.salespersonid WHERE DATENAME(YYYY,c.saledate) = '2010' 
+SELECT a.name FROM customer a JOIN sale b ON a.customerid = b.customerid JOIN
+sale c ON b.customerid = c.salespersonid WHERE DATENAME(YYYY,c.saledate) = '2010' 
 
 --15. Find the name and salesperson ID of the salesperson who sold the most cars for the company at dealerships 
 --located in Gujarat between March 1, 2010 and March 31, 2010.
 SELECT a.name, a.salespersonid FROM salesperson a JOIN sale b ON a.salespersonid = b.salespersonid JOIN dealership c 
-ON b.dealershipid = c.dealershipid WHERE c.state = 'Gujarat' AND saledate BETWEEN '01/03/2021' AND '31/03/2021'
+ON b.dealershipid = c.dealershipid WHERE c.state = 'Gujarat' AND saledate BETWEEN '2021-03-01' AND '2021-03-31'
 
 --16. Calculate the payroll for the month of March 2010.
 --	* The payroll consists of the name, salesperson ID, and gross pay for each salesperson who worked that month.
@@ -171,6 +427,7 @@ ON b.dealershipid = c.dealershipid WHERE c.state = 'Gujarat' AND saledate BETWEE
 --  * The profit made on a car is the difference between the sale price and the invoice price of the car. 
 --(Assume, that cars are never sold for less than the invoice price.)
 
-SELECT a.name,a.salespersonid, SUM(b.saleprice-c.invoiceprice*0.05) + d.basesalaryformonth 'Total salary' FROM salesperson a JOIN sale b ON a.salespersonid = b.salespersonid JOIN car c ON b.vin = c.vin 
-JOIN worksat d ON d.salespersonid = b.salespersonid
-WHERE  FORMAT(b.saledate,'MMMM yyyy') = 'March 2010' AND  FORMAT(d.monthworked,'MMMM yyyy') = 'March 2010' GROUP BY b.salespersonid  
+SELECT name,d.salespersonid,Totalsalary + d.basesalaryformonth FROM(SELECT a.name,a.salespersonid, SUM((c.invoiceprice-b.saleprice)*0.05) 'Totalsalary'
+FROM salesperson a JOIN sale b ON a.salespersonid = b.salespersonid JOIN car c ON b.vin = c.vin 
+WHERE  FORMAT(b.saledate,'MMMM yyyy') = 'March 2010' GROUP BY a.salespersonid,a.name  )tmp  JOIN worksat d ON d.salespersonid = tmp.salespersonid
+WHERE FORMAT(d.monthworked,'MMMM yyyy') = 'March 2010' 
