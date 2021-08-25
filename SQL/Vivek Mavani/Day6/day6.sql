@@ -239,3 +239,124 @@ SELECT DISTINCT TOP(3) Salary FROM dbo.Employees ORDER BY Salary ASC
 SELECT DISTINCT TOP(4) Salary FROM dbo.Employees ORDER BY Salary DESC
 
 
+--1. Write a query to find the addresses (location_id, street_address, city, state_province, country_name) of all the departments. 
+GO
+CREATE VIEW  Employeesviewsassss1
+AS 
+SELECT LocationID, StreetAddress, City, StateProvince, CountryName 
+FROM dbo.Locations a
+ JOIN Countries b ON a.CountryID = b.CountryID
+ GO
+Select * FROM Employeesviewsassss1
+--2. Write a query to find the names (first_name, last name), department ID and name of all the employees. 
+GO
+CREATE VIEW  Employeesviewsassss2
+AS 
+SELECT a.FirstName + ' ' + a.LastName 'names', b.DepartmentID, b.DepartmentName 
+FROM Employees a
+JOIN 
+Departments b ON a.DepartmentID = b.DepartmentID
+ GO
+Select * FROM Employeesviewsassss2
+
+--3. Find the names (first_name, last_name), job, department number, and department name of the employees who work in London. 
+GO
+CREATE VIEW  Employeesviewsassss3
+AS SELECT e.FirstName + ' ' +e.LastName 'names', e.JobId, e.DepartmentID, d.DepartmentName 
+FROM dbo.Employees e
+JOIN
+dbo.Departments d ON (e.DepartmentID = d.DepartmentID) 
+JOIN 
+dbo.Locations l ON (d.LocationID = l.LocationID) 
+WHERE LOWER(l.city) = 'London';
+ GO
+Select * FROM Employeesviewsassss3
+--4. Write a query to find the employee id, name (last_name) along with their manager_id, manager name (last_name). 
+GO
+CREATE VIEW  Employeesviewsassss4
+AS SELECT e.EmployeeID 'Emp_Id', e.LastName 'Employee name', m.EmployeeID 'Mgr_Id', 
+m.LastName 'Manager name' 
+FROM Employees e 
+join Employees m
+ON (e.ManagerID = m.EmployeeID);
+ GO
+Select * FROM Employeesviewsassss4
+--5. Find the names (first_name, last_name) and hire date of the employees who were hired after 'Jones'. 
+GO
+CREATE VIEW  Employeesviewsassss5
+AS SELECT e.FirstName + ' ' +e.LastName 'names', e.HireDate
+FROM Employees e
+JOIN 
+Employees davies
+ON (davies.LastName = 'Jones')
+WHERE davies.HireDate < e.HireDate
+ GO
+Select * FROM Employeesviewsassss5
+--6. Write a query to get the department name and number of employees in the department. 
+GO
+CREATE VIEW  Employeesviewsassss6
+AS SELECT a.DepartmentName  'Department Name', 
+COUNT(*)  'No of Employees' 
+FROM Departments a
+ JOIN Employees b
+ON b.DepartmentID = a.DepartmentID 
+GROUP BY a.DepartmentID, a.DepartmentName 
+ORDER BY a.DepartmentName;
+ GO
+Select * FROM Employeesviewsassss6
+--7. Find the employee ID, job title, number of days between ending date and starting date for all jobs in department 90 from job history. 
+GO
+CREATE VIEW  Employeesviewsassss7
+AS SELECT a.EmployeeID, a.JobID, DATEDIFF(YEAR,a.EndDate,a.StartDate)  Days FROM JobHistory a
+ JOIN Employees b
+ON a.JobID = b.JobId WHERE  a.DepartmentID=90;
+ GO
+Select * FROM Employeesviewsassss7
+--8. Write a query to display the department ID, department name and manager first name. 
+GO
+CREATE VIEW  Employeesviewsassss8
+AS SELECT d.DepartmentID, d.DepartmentName, e.ManagerID, e.FirstName 
+FROM Departments d 
+ JOIN Employees e 
+ON (d.ManagerID = e.EmployeeID);
+ GO
+Select * FROM Employeesviewsassss8
+--9. Write a query to display the department name, manager name, and city. 
+GO
+CREATE VIEW  Employeesviewsassss9
+AS SELECT d.DepartmentName, e.FirstName, l.City 
+FROM Departments d 
+JOIN Employees e 
+ON (d.ManagerID = e.EmployeeID) 
+JOIN locations l ON l.LocationID = d.LocationID 
+ GO
+Select * FROM Employeesviewsassss9
+--10. Write a query to display the job title and average salary of employees. 
+GO
+CREATE VIEW  Employeesviewsassss10
+AS SELECT a.JobId, AVG(salary) 
+FROM employees a
+ JOIN JobHistory b ON a.JobId = b.JobID
+GROUP BY a.JobID; 
+ GO
+Select * FROM Employeesviewsassss10
+--12. Write a query to display the job history that were done by any employee who is currently drawing more than 10000 of salary. 
+GO
+CREATE VIEW  Employeesviewsassss12
+AS SELECT jh.* FROM JobHistory jh 
+JOIN employees e 
+ON (jh.EmployeeID = e.EmployeeID) 
+WHERE salary > 10000;
+ GO
+Select * FROM Employeesviewsassss12
+--13. Write a query to display department name, name (first_name, last_name), hire date, salary of the manager for all managers
+--whose experience is more than 15 years. 
+GO
+CREATE VIEW  Employeesviewsassss13
+AS SELECT FirstName, LastName, HireDate, salary, 
+(DATEDIFF(YEAR,GETDATE(), HireDate)) Experience 
+FROM departments d JOIN employees e 
+ON (d.ManagerID = e.EmployeeID) 
+WHERE (DATEDIFF(YEAR,GETDATE(), HireDate))>15
+ GO
+Select * FROM Employeesviewsassss13
