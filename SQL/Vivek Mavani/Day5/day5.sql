@@ -14,15 +14,15 @@ SELECT e.first_name,i.incentive_amount FROM employee e JOIN incentives i
 ON e.employeee_id = i.employeee_id WHERE i.incentives_amount > 3000 AND e.incentive_amount > 3000
 
 --Select first_name, incentive amount from employee and incentives table for all employees even if they didn’t get incentives.
-SELECT e.first_name,i.incentive_amount FROM employee e RIGHT JOIN incentives i ON e.employeee_id = i.employeee_id
+SELECT e.first_name,i.incentive_amount FROM employee e LEFT JOIN incentives i ON e.employeee_id = i.employeee_id
 
 --Select EmployeeName, ManagerName from the employee table.
 SELECT e.EmployeeName,i.ManagerName FROM employee e  JOIN employee i ON e.employeee_id = i.manager_id
 
 --Select first_name, incentive amount from employee and incentives table for all employees even if they didn’t get incentives and
 --set incentive amount as 0 for those employees who didn’t get incentives.
-SELECT e.first_name,i.incentive_amount FROM employee e RIGHT JOIN incentives i ON e.employeee_id = i.employeee_id
-WHERE i.incentive_amount = 0
+SELECT e.FirstName, IIF(0 != i.incentive_amount,i.incentive_amount,0),e.EmployeeID FROM Employees e 
+LEFT JOIN incentives i ON e.EmployeeID = i.employeee_id
 
 
  /*  i. car (carid, vin, make, model, year, mileage, askprice, invoiceprice)

@@ -360,3 +360,33 @@ ON (d.ManagerID = e.EmployeeID)
 WHERE (DATEDIFF(YEAR,GETDATE(), HireDate))>15
  GO
 Select * FROM Employeesviewsassss13
+
+-- join to subquery
+
+--Get difference between JOINING_DATE and INCENTIVE_DATE from employee and incentives table
+SELECT  DATEDIFF(year,e.HireDate,(SELECT  INCENTIVE_DATE FROM 
+incentives WHERE employeee_id = e.EmployeeID)) AS [datediff] FROM Employees e
+
+--Select first_name, incentive amount 
+--from employee and incentives table for those employees
+--who have incentives and incentive amount greater than 3000
+SELECT e.FirstName,(SELECT i.incentive_amount FROM 
+incentives i WHERE i.employeee_id = e.EmployeeID AND
+i.incentive_amount > 3000 AND e.Salary > 3000) AS abcd
+FROM Employees e 
+
+--Select first_name, incentive amount from employee and 
+--incentives table for all employees even if they didn’t get incentives.
+SELECT   e.EmployeeID,e.FirstName,(SELECT incentive_amount  FROM 
+incentives WHERE  employeee_id = e.EmployeeID)  FROM Employees e
+
+--Select EmployeeName, ManagerName from the employee table.
+SELECT  e.FirstName,(SELECT FirstName  FROM 
+Employees WHERE EmployeeID = e.ManagerID)  FROM Employees e
+
+--Select first_name, incentive amount from employee and
+--incentives table for all employees even if they didn’t get incentives and
+--set incentive amount as 0 for those employees who didn’t get incentives.
+SELECT   e.EmployeeID,e.FirstName,IIF(0 != (SELECT incentive_amount  FROM 
+incentives WHERE  employeee_id = e.EmployeeID),(SELECT incentive_amount  FROM 
+incentives WHERE  employeee_id = e.EmployeeID), 0)  FROM Employees e
