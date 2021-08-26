@@ -202,7 +202,9 @@ SELECT FirstName + ' '+ LastName 'names' FROM dbo.Employees WHERE EmployeeID <>A
 (SELECT ManagerID FROM dbo.Employees)
 
 --13. Write a query to display the employee ID, first name, last names, and department names of all employees. 
-SELECT a.FirstName,a.LastName,a.EmployeeID,b.DepartmentName FROM dbo.Employees a JOIN dbo.Departments b ON a.DepartmentID = b.DepartmentID
+SELECT a.FirstName,a.LastName,a.EmployeeID,(SELECT DepartmentName FROM Departments WHERE 
+DepartmentID = a.DepartmentID)
+FROM dbo.Employees a
 
 --14. Write a query to display the employee ID, first name, last names, salary of all employees whose salary is
 --above average for their departments. 
