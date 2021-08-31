@@ -1,0 +1,624 @@
+History for SocialMedia/social.sql
+Commits on Aug 31, 2021
+
+formated queries
+
+@Prit1912
+Prit1912 committed 3 minutes ago
+
+History for SocialMedia/social.sql
+Commits on Aug 27, 2021
+
+GroupMessageSeen,Master table insert and create
+
+@vivekmavani
+vivekmavani committed 4 days ago
+ 
+change in query
+
+@romishpatoriya
+romishpatoriya committed 4 days ago
+ 
+chnage in table
+
+@vivekmavani
+vivekmavani committed 4 days ago
+ 
+change in query
+
+@vivekmavani
+vivekmavani committed 4 days ago
+ 
+change
+
+@vivekmavani
+vivekmavani committed 4 days ago
+ 
+Commits on Aug 25, 2021
+birthday query
+
+@vivekmavani
+vivekmavani committed 6 days ago
+ 
+Merge branch 'main' of https://github.com/vivekmavani/SocialMedia int… …
+
+@Prit1912
+Prit1912 committed 6 days ago
+ 
+changes in queries
+
+@Prit1912
+Prit1912 committed 6 days ago
+ 
+chnage ni spelling
+
+@vivekmavani
+vivekmavani committed 6 days ago
+ 
+Added query
+
+@hiren018
+hiren018 committed 6 days ago
+ 
+changes
+
+@romishpatoriya
+romishpatoriya committed 6 days ago
+ 
+Merge branch 'main' of https://github.com/vivekmavani/SocialMedia
+
+@romishpatoriya
+romishpatoriya committed 6 days ago
+ 
+add tag query
+
+@romishpatoriya
+romishpatoriya committed 6 days ago
+ 
+added new queries
+
+@vivekmavani
+vivekmavani committed 6 days ago
+ 
+Updated Query
+
+@hiren018
+hiren018 committed 6 days ago
+ 
+insert user data update
+
+@vivekmavani
+vivekmavani committed 6 days ago
+ 
+update create table
+
+@vivekmavani
+vivekmavani committed 6 days ago
+ 
+update likes query
+
+@vivekmavani
+vivekmavani committed 6 days ago
+ 
+Merge branch 'main' of https://github.com/vivekmavani/SocialMedia
+
+@romishpatoriya
+romishpatoriya committed 6 days ago
+ 
+chages in query
+
+@romishpatoriya
+romishpatoriya committed 6 days ago
+ 
+changes in query
+
+@romishpatoriya
+romishpatoriya committed 6 days ago
+ 
+added queris related to friendlist
+
+@Prit1912
+Prit1912 committed 6 days ago
+ 
+Commits on Aug 24, 2021
+Merge branch 'main' of https://github.com/vivekmavani/SocialMedia int… …
+
+@Prit1912
+Prit1912 committed 7 days ago
+ 
+updated query related to comment table
+
+@Prit1912
+Prit1912 committed 7 days ago
+ 
+Merge branch 'main' of https://github.com/vivekmavani/SocialMedia
+
+@romishpatoriya
+romishpatoriya committed 7 days ago
+ 
+change insert data
+
+@romishpatoriya
+romishpatoriya committed 7 days ago
+ 
+update query
+
+@vivekmavani
+vivekmavani committed 7 days ago
+ 
+Merge branch 'main' of https://github.com/vivekmavani/SocialMedia
+
+@hiren018
+hiren018 committed 7 days ago
+ 
+Update some query
+
+@hiren018
+hiren018 committed 7 days ago
+ 
+Merge branch 'main' of https://github.com/vivekmavani/SocialMedia int… …
+
+@Prit1912
+Prit1912 committed 7 days ago
+ 
+updated some queries
+
+@Prit1912
+Prit1912 committed 7 days ago
+ 
+Merge branch 'main' of https://github.com/vivekmavani/SocialMedia int… …
+
+@vivekmavani
+vivekmavani committed 7 days ago
+ 
+comment old code
+
+@vivekmavani
+vivekmavani committed 7 days ago
+ 
+update some changes
+
+@Prit1912
+Prit1912 committed 7 days ago
+ 
+updated user table with master table values
+
+@Prit1912
+Prit1912 committed 7 days ago
+
+
+History for SocialMedia/social.sql
+Commits on Aug 24, 2021
+Updated Image table
+
+@hiren018
+hiren018 committed 7 days ago
+ 
+Deleted image column from post and updated image table
+
+@hiren018
+hiren018 committed 7 days ago
+ 
+some changes
+
+@romishpatoriya
+romishpatoriya committed 7 days ago
+ 
+Merge branch 'main' of https://github.com/vivekmavani/SocialMedia int… …
+
+@vivekmavani
+vivekmavani committed 7 days ago
+ 
+add columns in FriendRequest
+
+@vivekmavani
+vivekmavani committed 7 days ago
+ 
+add columns in FriendRequest
+
+@vivekmavani
+vivekmavani committed 7 days ago
+ 
+add values in tags
+
+@romishpatoriya
+romishpatoriya committed 7 days ago
+ 
+ADD CONSTRAINT
+
+@romishpatoriya
+romishpatoriya committed 7 days ago
+ 
+insert dtaa in FriendRequest
+
+@vivekmavani
+vivekmavani committed 7 days ago
+ 
+Merge branch 'main' of https://github.com/vivekmavani/SocialMedia int… …
+
+@vivekmavani
+vivekmavani committed 7 days ago
+ 
+update in add column in FriendRequest
+
+@vivekmavani
+vivekmavani committed 7 days ago
+ 
+Added image table
+
+@hiren018
+hiren018 committed 7 days ago
+ 
+Merge branch 'main' of https://github.com/vivekmavani/SocialMedia int… …
+
+@vivekmavani
+vivekmavani committed 7 days ago
+ 
+add column in FriendRequest
+
+@vivekmavani
+vivekmavani committed 7 days ago
+ 
+Merge branch 'main' of https://github.com/vivekmavani/SocialMedia int… …
+
+@Prit1912
+Prit1912 committed 7 days ago
+ 
+added check constraint
+
+@Prit1912
+Prit1912 committed 7 days ago
+ 
+Added data for user status column
+
+@Prit1912
+Prit1912 committed 7 days ago
+ 
+Merge branch 'main' of https://github.com/vivekmavani/SocialMedia
+
+@romishpatoriya
+romishpatoriya committed 7 days ago
+ 
+Add Tag Table
+
+@romishpatoriya
+romishpatoriya committed 7 days ago
+ 
+Merge branch 'main' of https://github.com/vivekmavani/SocialMedia int… …
+
+@Prit1912
+Prit1912 committed 7 days ago
+ 
+Added master table
+
+@Prit1912
+Prit1912 committed 7 days ago
+ 
+chnage column name
+
+@vivekmavani
+vivekmavani committed 7 days ago
+ 
+Commits on Aug 23, 2021
+changes quries
+
+@romishpatoriya
+romishpatoriya committed 8 days ago
+ 
+added queries for group tables
+
+@Prit1912
+Prit1912 committed 8 days ago
+ 
+updated some queries
+
+@Prit1912
+Prit1912 committed 8 days ago
+ 
+change in Category_ID data type smallint
+
+@romishpatoriya
+romishpatoriya committed 8 days ago
+  
+Update query
+
+@hiren018
+hiren018 committed 8 days ago
+ 
+Update the query
+
+@hiren018
+hiren018 committed 8 days ago
+ 
+nchar(1) in Gender
+
+@vivekmavani
+vivekmavani committed 8 days ago
+ 
+FriendAccept change
+
+@vivekmavani
+vivekmavani committed 8 days ago
+ 
+Merge branch 'main' of https://github.com/vivekmavani/SocialMedia int… …
+
+@vivekmavani
+vivekmavani committed 8 days ago
+ 
+change
+
+@vivekmavani
+vivekmavani committed 8 days ago
+ 
+Added queries related to group tables
+
+@Prit1912
+Prit1912 committed 8 days ago
+ 
+not null done
+
+@vivekmavani
+vivekmavani committed 8 days ago
+ 
+raname table name
+
+@vivekmavani
+vivekmavani committed 8 days ago
+
+
+History for SocialMedia/social.sql
+Commits on Aug 23, 2021
+Merge branch 'main' of https://github.com/vivekmavani/SocialMedia int… …
+
+@vivekmavani
+vivekmavani committed 8 days ago
+ 
+add post and change spelling of the friendrequest
+
+@vivekmavani
+vivekmavani committed 8 days ago
+ 
+merge changes
+
+@Prit1912
+Prit1912 committed 8 days ago
+ 
+added data for group tables
+
+@Prit1912
+Prit1912 committed 8 days ago
+ 
+not null in post uid
+
+@vivekmavani
+vivekmavani committed 8 days ago
+ 
+not null in post cat_id
+
+@vivekmavani
+vivekmavani committed 8 days ago
+ 
+Merge branch 'main' of https://github.com/vivekmavani/SocialMedia int… …
+
+@vivekmavani
+vivekmavani committed 8 days ago
+ 
+add insert query
+
+@vivekmavani
+vivekmavani committed 8 days ago
+ 
+update group tables
+
+@Prit1912
+Prit1912 committed 8 days ago
+ 
+added table for group
+
+@Prit1912
+Prit1912 committed 8 days ago
+ 
+added groups related tables
+
+@Prit1912
+Prit1912 committed 8 days ago
+ 
+change db
+
+@vivekmavani
+vivekmavani committed 8 days ago
+ 
+database like change
+
+@vivekmavani
+vivekmavani committed 8 days ago
+ 
+Merge branch 'main' of https://github.com/vivekmavani/SocialMedia int… …
+
+@vivekmavani
+vivekmavani committed 8 days ago
+ 
+update databse
+
+@vivekmavani
+vivekmavani committed 8 days ago
+ 
+Search by Name and categories
+
+@romishpatoriya
+romishpatoriya committed 8 days ago
+ 
+Commits on Aug 20, 2021
+categories restriction age vies
+
+@romishpatoriya
+romishpatoriya committed 11 days ago
+ 
+change in like
+
+@vivekmavani
+vivekmavani committed 11 days ago
+ 
+Like module
+
+@vivekmavani
+vivekmavani committed 11 days ago
+ 
+Update query no. 5 and add some addtional query
+
+@hiren018
+hiren018 committed 11 days ago
+ 
+tranding post check
+
+@romishpatoriya
+romishpatoriya committed 11 days ago
+ 
+NEW
+
+@romishpatoriya
+romishpatoriya committed 11 days ago
+ 
+Added some queris to work with comment table
+
+@Prit1912
+Prit1912 committed 11 days ago
+ 
+Add New table
+
+@hiren018
+hiren018 committed 11 days ago
+ 
+Add Comment Table By Hiren
+
+@hiren018
+hiren018 committed 11 days ago
+ 
+add dob in users
+
+@vivekmavani
+vivekmavani committed 11 days ago
+ 
+Merge branch 'main' of https://github.com/vivekmavani/SocialMedia int… …
+
+@vivekmavani
+vivekmavani committed 11 days ago
+ 
+Password varbinary(100)
+
+@vivekmavani
+vivekmavani committed 11 days ago
+ 
+add some query
+
+@romishpatoriya
+romishpatoriya committed 11 days ago
+ 
+additional queries
+
+@Prit1912
+Prit1912 committed 11 days ago
+ 
+Additional queries
+
+@Prit1912
+Prit1912 committed 11 days ago
+ 
+Written Different Query By Hiren
+
+@hiren018
+hiren018 committed 11 days ago
+ 
+friend suggestions
+
+@vivekmavani
+vivekmavani committed 11 days ago
+ 
+Commits on Aug 19, 2021
+Encrypt,Decrypt password
+
+@vivekmavani
+vivekmavani committed 12 days ago
+ 
+update like value
+
+@romishpatoriya
+romishpatoriya committed 12 days ago
+
+
+History for SocialMedia/social.sql
+Commits on Aug 19, 2021
+Merge branch 'main' of https://github.com/vivekmavani/SocialMedia
+
+@romishpatoriya
+romishpatoriya committed 12 days ago
+ 
+Update like value
+
+@romishpatoriya
+romishpatoriya committed 12 days ago
+ 
+updated chat query
+
+@Prit1912
+Prit1912 committed 12 days ago
+ 
+update friend request data for chat
+
+@Prit1912
+Prit1912 committed 12 days ago
+ 
+updated chat data
+
+@Prit1912
+Prit1912 committed 12 days ago
+ 
+friend request
+
+@vivekmavani
+vivekmavani committed 12 days ago
+ 
+Merge branch 'main' of https://github.com/vivekmavani/SocialMedia int… …
+
+@vivekmavani
+vivekmavani committed 12 days ago
+ 
+update database
+
+@vivekmavani
+vivekmavani committed 12 days ago
+ 
+Friend Accepte table qureies added
+
+@romishpatoriya
+romishpatoriya committed 12 days ago
+ 
+Add post table record and quries
+
+@romishpatoriya
+romishpatoriya committed 12 days ago
+ 
+comments add
+
+@vivekmavani
+vivekmavani committed 12 days ago
+ 
+Added queries to work with chat table
+
+@Prit1912
+Prit1912 committed 12 days ago
+ 
+Insert value in Users by HIren Sanghani
+
+@hiren018
+hiren018 committed 12 days ago
+ 
+add,update,delete, display categories
+
+@vivekmavani
+vivekmavani committed 12 days ago
+ 
+add database vivek
+
+@vivekmavani
+vivekmavani committed 12 days ago
