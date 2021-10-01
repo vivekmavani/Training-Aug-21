@@ -18,15 +18,18 @@ console.log("sum of that numbers which are greater than 40 : " +sum(a,b,c));
 }
 
 function sum(a,b,c) {
-var array = Array(a,b,c);
-if(a > 40 && b > 40)
+var sum = 0;
+if(a > 40)
 {
-    return a+b;
-}else if(b > 40 && c > 40){
-    return c+b;
-}else if(a > 40 && c > 40){
-    return c+a;
+    sum+=a;
 }
+ if(b > 40){
+  sum+=b;
+}
+ if(c > 40){
+  sum+=c;
+}
+return sum;
 }
 
 // Declare array with 5 city names and iterate these values with the help of loop and display it with alert.
