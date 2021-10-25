@@ -109,14 +109,14 @@ const rl = readline.createInterface({
 const question1 = () => {
   return new Promise((resolve, reject) => {
     rl.question('Enter First Number: ', (answer) => {
-      resolve(answer)
+      resolve(parseInt(answer))
     })
   })
 }
 const question2 = () => {
   return new Promise((resolve, reject) => {
     rl.question('Enter Second Number: ', (answer) => {
-      resolve(answer)
+      resolve(parseInt(answer))
     })
   })
 }
@@ -142,9 +142,16 @@ const main = async () => {
             case '-': calc.sub(a,b);
             break;
             default: console.log('please enter valid operator');
-           exit();
+  
             break;
         }
   rl.close()
+  try {
+    const data = fs.readFileSync('person.txt', 'utf8')
+   console.log(data);
+  } catch (err) {
+    console.error(err)
+  }
 }
+
 main()

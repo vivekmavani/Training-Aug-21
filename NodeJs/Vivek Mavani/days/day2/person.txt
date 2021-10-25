@@ -1,0 +1,4 @@
+Addition is : 3
+ Addition is : 4
+ Division is : 0.5
+ Substraction is: 0
