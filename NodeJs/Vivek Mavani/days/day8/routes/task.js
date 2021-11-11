@@ -39,27 +39,27 @@ router.get('/students',verifyToken,(req,res)=>{
 
 // http://localhost:3000/students/1
 
-router.get('/students/:id',(req,res)=>{
+router.get('/students/:id',verifyToken,(req,res)=>{
     const student = students.find(c => c.ID === parseInt(req.params.id));
     if(!student) return res.status(404).send('The student with given id was not found');
     res.send(student);
 });
 
 // 3. Create a RESTFUL API which return a particular student FEES Record. Fees field are http://localhost:3000/students/1/fees
-router.get('/students/:id/:fees',(req,res)=>{
+router.get('/students/:id/:fees',verifyToken,(req,res)=>{
     const student = students.find(c => c.ID === parseInt(req.params.id));
     if(!student) return res.status(404).send('The student with given id was not found');
     res.send(student.Fees);
 });
 // 4. Create a RESTFUL API which will return a particular student Exam Result. Result Fields are http://localhost:/3000/students/1/result
-router.get('/students/:id/:result',(req,res)=>{
+router.get('/students/:id/:result',verifyToken,(req,res)=>{
     const student = students.find(c => c.ID === parseInt(req.params.id));
     if(!student) return res.status(404).send('The student with given id was not found');
     res.send(student.Result);
 });
 // 5. Create a RESTFUL API which will update a result of result of student id 1. Update the marks for English Subject.
 
-router.put('/student/:id',(req,res) =>{
+router.put('/student/:id',verifyToken,(req,res) =>{
     const student = students.find(c => c.ID === parseInt(req.params.id));
     if(!student) return res.status(404).send('The student with given id was not found');
 
